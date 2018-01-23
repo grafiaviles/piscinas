@@ -1,0 +1,160 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-self: flex-end;
+    position: relative;
+    background-color: #242424;
+    color: white;
+    font-weight: 500;
+    // Información Footer
+    .cont-info-footer {
+        width: 100%;
+        & .my-container {
+            margin: auto;
+            padding: 0;
+            padding-top: 6.5rem;
+            padding-bottom: 1rem;
+            @media screen and (max-width: 480px) {
+                padding-bottom: 20px;
+            }
+            & .box {
+                box-shadow: 1px 0 0 #666666;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                height: 180px;
+                @media screen and (max-width: 480px) {
+                    margin-bottom: 30px;
+                    height: auto;
+                    box-shadow: 0 1px 0 #666666;
+                }
+                & .logo-odfs-footer {
+                    //width: 200px;
+                }
+                & .box-flex {
+                    width: 90%;
+                    & h4 {
+                        font-size: 15px;
+                        text-transform: uppercase;
+                        font-weight: normal;
+                        margin: 0;
+                        text-align: left;
+                        margin-bottom: 20px;
+                        font-weight: 500;
+                        & i {
+                            padding-right: 10px;
+                        }
+                    }
+                    & .category-footer {
+                        padding: 0;
+                        margin-bottom: 20px;
+                        & li {
+                            list-style: none;
+                            margin: 0;
+                            padding: 0;
+                            text-align: left;
+                            & a {
+                                padding: 0;
+                                color: #999999;
+                                line-height: 30px;
+                                margin: 0;
+                                font-size: 13px;
+                                transition: $transition1;
+                            }
+                            & .number-foot {
+                                font-size: 15px;
+                            }
+                            & a:hover {
+                                color: $whitePolar;
+                            }
+                        }
+                    }
+                    & .cat-redes {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        & .redes {
+                            line-height: 40px;
+                            text-align: center;
+                            //border: solid 1px #999;
+                            color: white;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                            width: 40px;
+                            height: 40px;
+                            margin-right: 10px;
+                            border-radius: 20px;
+                            font-size: 15px;
+                            opacity: .6;
+                        }
+                        & li:nth-of-type(1)>.redes {
+                            border: solid 1px #3b5998;
+                            background: #3b5998;
+                        }
+                        & li:nth-of-type(2)>.redes {
+                            border: solid 1px #55acee;
+                            background: #55acee;
+                        }
+                        & li:nth-of-type(3)>.redes {
+                            border: solid 1px #e95950;
+                            background: #e95950;
+                        }
+                        & li:nth-of-type(4)>.redes {
+                            border: solid 1px #ff0000;
+                            background: #ff0000;
+                        }
+                        & .redes:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+                & .box-flex-tel {
+                    flex-direction: column;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                }
+            }
+            & .box:last-child {
+                box-shadow: none;
+            }
+        }
+    }
+    // Derecho Reservados
+    & .derechos-reservados {
+        background-color: $blackPolar;
+        padding: 10px 0;
+        width: 100%;
+        @media screen and (max-width: 480px) {
+            padding: 20px 0;
+        }
+        & .cont-derechos {
+            width: 90%;
+            & .valign-wrapper {
+                margin: 0;
+                width: 100%;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                & .logo-lapolar-derechos {
+                    width: 110px;
+                    position: relative;
+                    top: 5px;
+                    @media screen and (max-width: 480px) {
+                        margin-bottom: 10px;
+                    }
+                }
+                & h6 {
+                    font-size: 11px;
+                    color: #777;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

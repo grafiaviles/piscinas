@@ -1,0 +1,84 @@
+/* Cover Fixed */
+.parallax-container {
+    
+    height: 400px;
+    width: 100%;
+    background-image: url(../img/ofds/cover.jpg);
+    background-position: center;
+}
+
+/*Slider Landing*/
+.swiper-container {
+    width: 100%;
+    height: 600px;
+    & .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & .btn-slider {
+            border: 2px solid $blackPolar;
+            padding: 15px 25px;
+            transition: all .4s;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: $blackPolar;
+            position: relative;
+            @media screen and (max-width: 480px) {
+                margin-top: 50px;
+            }
+        }
+        & .btn-slider:hover {
+            background-color: $blackPolar;
+            color: $whitePolar;
+        }
+        & .btn-slider:active {
+            transform: scale(.90);
+        }
+    }
+    & .swiper-pagination {
+        bottom: 30px!important;
+        & .swiper-pagination-bullet {
+            background: $whitePolar;
+            opacity: 1;
+        }
+        & .swiper-pagination-bullet-active {
+            background: $redPolar;
+        }
+    }
+    & .swiper-button-prev {}
+    & .swiper-button-next {}
+}
+
+.inicio-btn {
+    left: 23px;
+    bottom: 23px;
+    position: fixed;
+    z-index: 997;
+    display: none;
+    padding-top: 15px;
+    margin-bottom: 0;
+    & a {
+        background: $piscinaColor;
+        & i {
+            color: $whitePolar;
+        }
+    }
+}
+
+.filtros {
+    margin-top: 2rem;
+    width: 100%;
+    & .tabs {
+        margin-bottom: 2rem;
+        @media screen and (max-width: 480px) {
+            display: flex;
+        }
+        & .icon {
+            position: absolute;
+        }
+    }
+}

@@ -1,0 +1,294 @@
+.calugas {
+    width: 270px;
+    height: 450px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+    padding: 0px;
+    margin-top: 20px;
+    overflow: hidden;
+    transition: $transition1;
+    border-radius: 5px;
+    @media screen and (max-width: 480px) {
+        margin-right: 0;
+    }
+    & .ver-mas-cal {
+        position: absolute;
+        background-color: $redPolar;
+        width: $width;
+        text-align: center;
+        margin: 0;
+        bottom: -55px;
+        opacity: 1;
+        transition: $transition1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & p {
+            margin: 15px 0;
+            color: $whitePolar;
+            letter-spacing: 1px;
+            font-weight: bold;
+            font-size: 14px;
+            vertical-align: middle;
+            position: relative;
+            width: 90%;
+            & i {
+                vertical-align: middle;
+                font-size: 18px;
+                position: absolute;
+                top: -2px;
+                right: 0px;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.calugas:hover .ver-mas-cal {
+    bottom: 5px;
+    opacity: 1;
+}
+
+.calugas:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.1);
+}
+
+//BOX PISCINAS
+.cont-box-piscinas {
+    margin: 0;
+    margin-bottom: 4rem;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0!important;
+    margin-right: 0!important;
+    @media screen and (max-width: 480px) {
+        margin-bottom: 2rem;
+    }
+    //opcion1
+    & .box-piscina {
+        border-radius: 10px;
+        box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.1);
+        position: relative;
+        padding: 0;
+        transform: rotate(2deg); 
+        margin-left: 0!important;
+        opacity: 0;
+        @media screen and (max-width: 480px) {
+            box-shadow: none;
+            transform: none;
+        }
+        & .card-horizontal {
+            border-radius: 10px;
+            margin: 0;
+            box-shadow: none;
+            overflow: hidden;
+            @media screen and (max-width: 480px) {
+                flex-direction: column;
+            }
+            & .card-image {
+                padding: 1.5rem;
+                margin: auto;
+                position: relative;
+                @media screen and (max-width: 480px) {
+                    padding: 0;
+                    max-width: 85%;
+                    margin-top: 1.5rem;
+                }
+                & img {
+                    width: 280px;
+                }
+                & .litros {
+                    position: absolute;
+                    background: $redPolar;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    line-height: 15px;
+                    border-radius: 25px;
+                    font-size: .9rem;
+                    width: 50px;
+                    height: 50px;
+                    font-weight: 600;
+                    z-index: 10;
+                    box-shadow: 0 5px 0px 0px rgba(0, 0, 0, .2);
+                    animation: litros 1s infinite alternate; 
+                }
+                @keyframes litros {
+                    0% {
+                        transform: translateY(0px);
+                    }
+                    100% {
+                        transform: translateY(10px);
+                    }
+                }
+                & .listros-1 {
+                    top: 35%;
+                    right: 20px;
+                    @media screen and (max-width: 480px) {
+                        width: 40px;
+                        height: 40px;
+                        right: -10px;
+                        top: 0px;
+                    }
+                }
+                & .listros-3 {
+                    top: 35%;
+                    right: 0px;
+                    @media screen and (max-width: 480px) {
+                        width: 40px;
+                        height: 40px;
+                        right: -10px;
+                        top: 0;
+                    }
+                }
+            }
+            & .card-content {
+                h3 {
+                    font-size: 2rem;
+                    color: $piscinaColor;
+                    margin-bottom: 1rem;
+                    font-weight: 500;
+                }
+                h3.precio {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    color: $redPolar;
+                    font-weight: 600;
+                    letter-spacing: -1px;
+                    margin-bottom: .5rem;
+                    & .tlp {
+                        display: inline-block;
+                        margin-left: .5rem;
+                    }
+                }
+                p.precio-normal {
+                    text-decoration: line-through;
+                    font-weight: 500;
+                    font-size: .8rem;
+                    color: $myParrafo;
+                }
+
+            }
+            & .card-action {
+                border-top: none;
+                a {
+                    color: $piscinaColor!important;
+                    display: block;
+                    cursor: pointer;
+                    .icon-arrow-right3  {
+                        font-size: 1.2rem;
+                        position: absolute;
+                        top: 5px;
+                        right: -2px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: $transition1;
+                        background: $piscinaColor;
+                        color: $whitePolar;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 25px 0 0 0;
+                        font-weight: 600;
+                        box-shadow: 0 0 0 20px rgba(0, 187, 255, 0.2), 0 0 0 10px rgba(0, 187, 255, 0.5);
+                    }
+                }
+                & a:hover  {
+                    color: $piscinaColor!important;
+                }
+                & a:hover .icon-arrow-right3 {
+                    background: $piscinaColor;
+                    color: $whitePolar;
+                    box-shadow: 0 0 0 40px rgba(0, 187, 255, 0.2), 0 0 0 20px rgba(0, 187, 255, 0.5);
+                }
+            }
+        }
+    }
+    //opcion2
+    & .box-piscina-2 {
+        position: relative;
+        border-radius: 10px!important;    
+        box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.1);
+        background-image: url(../img/calugas/comillas.jpg);
+        background-repeat: no-repeat;
+        background-position: -10% 30%;
+        transform: rotate(-2deg);
+        opacity: 0;
+        @media screen and (max-width: 480px) {
+            margin-top: 2rem;
+            box-shadow: none;
+            transform: none;
+        }
+        & .elemento-playa {
+            position: absolute;
+            right: 0;
+            top: -60px;
+            @media screen and (max-width: 480px) {
+                max-width: 80px;
+                top: -45px;
+            }
+        }
+        & .elemento-playa {
+            left: 0!important;
+        }
+        & .cont-tips {
+            padding: 24px;
+            margin: 0;
+            & p {
+                font-style: italic;
+                font-weight: 500;
+                line-height: normal;
+                color: #0072c0;
+                font-size: 1rem;
+                & span {
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 1.5rem;
+                }
+            }
+            & .coral-red {
+                color: #e45159;
+            }
+            & .yellow-sol {
+                color: #f29b01;
+            }
+            & .darkcyan {
+                color: #00bace;
+            }
+            & .text-purple {
+                color: #7f98ce;
+            }
+        }
+    }
+    
+}
+.cont-box-piscinas:nth-child(even) {
+    flex-direction: row-reverse;
+    @media screen and (max-width: 480px) {
+        transform: none;
+    }
+    & .box-piscina {
+        transform: rotate(-2deg);
+        margin-left: auto!important;
+        @media screen and (max-width: 480px) {
+            transform: none;
+        }
+        }
+        & .box-piscina-2 {
+            transform: rotate(2deg);
+            @media screen and (max-width: 480px) {
+                transform: none;
+            }
+    }
+
+}
+thead {
+    color: $piscinaColor;
+}
+td {
+    color: #777;
+}
